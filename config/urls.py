@@ -22,18 +22,15 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 
-from rest_framework.documentation import include_docs_urls
 from rest_framework_swagger.views import get_swagger_view
 
-
-API_TITLE = '{project_name} API'
-
 urlpatterns = [
-    url(r'^swagger/$', get_swagger_view(title=API_TITLE)),
+    url(r'^swagger/$', get_swagger_view(title=settings.API_TITLE)),
 
     url(r'^admin/', admin.site.urls),
-    url(r'^auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^docs/', include_docs_urls(title=API_TITLE, description='')),
+
+    # mold app urls
+    url(r'^micro-service/', include('mold.routers', namespace=settings.APP_NAMESPACE))
 
 ]
 

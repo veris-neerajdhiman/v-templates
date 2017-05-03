@@ -246,7 +246,7 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-
+    'mold',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -301,8 +301,6 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
-        'rest_framework.renderers.CoreJSONRenderer',
-
         'rest_framework_swagger.renderers.OpenAPIRenderer',
         'rest_framework_swagger.renderers.SwaggerUIRenderer',
     ],
@@ -322,3 +320,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 50
 }
 # ######### END DJANGO REST FRAMEWORK CONFIGURATION
+
+
+API_TITLE = 'Template Service API'
+APP_NAMESPACE = 'template-service-urls'
