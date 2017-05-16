@@ -3,11 +3,11 @@ services:
   templates_db:
     image: postgres:9.6
     ports:
-     - "5432:5432"
+     - "9006:5432"
     env_file:
      - ../locale/env/template_service
     volumes:
-      - /home/veris/micro-services/data/postgres:/var/lib/postgresql/data
+      - /home/veris/micro-services/templates/data/postgres:/var/lib/postgresql/data
   v_templates:
     build:
       context: .
@@ -21,5 +21,4 @@ services:
      - .:/v-templates
     ports:
      - "8018:8018"
-#    depends_on:
-#      - templates_db
+
