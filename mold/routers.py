@@ -26,10 +26,12 @@ UUID_REGEX = '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
 
 template_list = views.TemplateViewSet.as_view({
     'get': 'list',
+    'post': 'create'
 })
 
 template_detail = views.TemplateViewSet.as_view({
     'get': 'retrieve',
+    'patch': 'update'
 })
 
 urlpatterns = [
