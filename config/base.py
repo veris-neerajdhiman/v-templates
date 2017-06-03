@@ -71,6 +71,12 @@ MANAGERS = (
 # ######### END MANAGER CONFIGURATION
 
 
+# ######### SECRET CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
+# Note: This key should only be used for development and testing.
+SECRET_KEY = get_env_setting('SECRET_KEY')
+# ######### END SECRET CONFIGURATION
+
 # ######### DATABASE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
@@ -153,13 +159,6 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
 )
 # ######### END STATIC FILE CONFIGURATION
-
-
-# ######### SECRET CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
-# Note: This key should only be used for development and testing.
-SECRET_KEY = r"ugdn_k*$*g3b_g3x$hf4mxm#l$h*si9&u-@5aokaumjz=#x5g7"
-# ######### END SECRET CONFIGURATION
 
 
 # ######### SITE CONFIGURATION
@@ -252,12 +251,6 @@ LOCAL_APPS = (
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # ######### END APP CONFIGURATION
-
-
-# ######### WSGI CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
-WSGI_APPLICATION = '{0}.wsgi.application'.format(SITE_MODULE)
-# ######### END WSGI CONFIGURATION
 
 
 # ######### PASSWORD VALIDATION CONFIGURATION

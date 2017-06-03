@@ -1,6 +1,6 @@
 """Development settings and globals."""
 
-from .base import *
+from config.base import *
 
 # ######### DEBUG CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
@@ -32,14 +32,19 @@ DATABASES = {
         # The PostgreSQL backend (django.db.backends.postgresql_psycopg2)
         # is also available as django.db.backends.postgresql. :)
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': get_env_setting('DATABASE_NAME_TEMPLATE'),
-        'USER': get_env_setting('DATABASE_USER'),
-        'PASSWORD': get_env_setting('DATABASE_PASSWORD'),
-        'HOST': get_env_setting('DATABASE_HOST'),
-        'PORT': get_env_setting('DATABASE_PORT')
+        'NAME': 'template_service',
+        'USER': 'v_admin',
+        'PASSWORD': 'admin@123',
+        'HOST': 'localhost',
+        'PORT': 5432
     }
 }
 ########## END DATABASE CONFIGURATION
+
+# ######### WSGI CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
+WSGI_APPLICATION = 'config.local.wsgi.application'
+# ######### END WSGI CONFIGURATION
 
 
 ########## CACHE CONFIGURATION
