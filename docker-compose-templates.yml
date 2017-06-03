@@ -11,12 +11,12 @@ services:
   v_templates:
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: ./Dockerfile.dev
     env_file:
      - ../locale/env/template_service
     environment:
      DEBUG: 'true'
-    command: bash -c "python ./manage.py migrate && python ./manage.py runserver 0.0.0.0:8018"
+    command: bash -c "make runserver port=8018"
     volumes:
      - .:/v-templates
     ports:
