@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-import os
-import sys
+import os, sys, re
+
+from django.core.exceptions import ImproperlyConfigured
+from config.load_env_variables import read_env
 
 if __name__ == '__main__':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.local')
+    # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.local.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError:
@@ -19,4 +21,15 @@ if __name__ == '__main__':
                 "forget to activate a virtual environment?"
             )
         raise
-    execute_from_command_line(sys.argv)
+    try:
+        # read Environment file
+        env_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config/local/env_file')
+        read_env(env_file)
+        # read_env()
+        execute_from_command_line(sys.argv)
+    except ImproperlyConfigured:
+        raise ImproperlyConfigured(
+            '-------WARNING--------- \n'
+            'Settings are not configured correctly\n'
+        )
+
