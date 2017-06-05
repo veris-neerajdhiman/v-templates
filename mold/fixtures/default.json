@@ -1,0 +1,1058 @@
+[{
+	"model": "mold.templates",
+	"pk": 2,
+	"fields": {
+		"uuid": "88e67e15-cf02-438a-8233-0735e5c5380a",
+		"name": "Who are you?",
+		"description": "WAY",
+		"schema": {
+			"resolved": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Who are you ?",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							},
+							"componentId": 4
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"components": [{
+								"value": "Name: ",
+								"type": "label",
+								"style": {
+									"fontWeight": 700,
+									"marginTop": 16
+								}
+							}, {
+								"name": "data.name",
+								"value": "Name of the User",
+								"type": "label",
+								"style": {
+									"marginTop": 16
+								}
+							}],
+							"type": "horizontal"
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 400,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"step_1": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Verify Phone Number",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							}
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "You'll get a OTP via SMS.\nCarrier rates may apply.",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 18,
+								"marginTop": 16
+							}
+						}, {
+							"placeholder": "Phone Number",
+							"type": "textfield"
+						}, {
+							"value": "Proceed",
+							"type": "button",
+							"style": {
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 300,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"step_2": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Enter your OTP",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							}
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "Enter the verification code sent to",
+							"type": "label",
+							"style": {
+								"fontSize": 18,
+								"marginTop": 16
+							}
+						}, {
+							"name": "data.phone",
+							"value": "+91xxxxxxxxxx",
+							"type": "label",
+							"style": {
+								"fontSize": 20
+							}
+						}, {
+							"placeholder": "OTP",
+							"type": "textfield"
+						}, {
+							"value": "Proceed",
+							"type": "button",
+							"style": {
+								"color": "#000"
+							}
+						}, {
+							"components": [{
+								"value": "Didn't receive a code ?",
+								"type": "label",
+								"style": {
+									"marginBottom": 16,
+									"marginTop": 16
+								}
+							}, {
+								"value": "Retry",
+								"type": "label",
+								"style": {
+									"padding": 8,
+									"color": "#000",
+									"borderStyle": "solid",
+									"borderWidth": 1,
+									"borderColor": "#000",
+									"margin": 8
+								}
+							}],
+							"type": "horizontal"
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 300,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Who are you ?",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							},
+							"componentId": 4
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "A guest should be identified before entering the premises. Please help us provide this organization a better security.",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"marginTop": 16
+							}
+						}, {
+							"value": "Proceed",
+							"type": "button",
+							"style": {
+								"maxWidth": 192,
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 400,
+							"padding": 16
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-05-03T13:53:55.257Z",
+		"modified_at": "2017-05-26T05:56:17.799Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 4,
+	"fields": {
+		"uuid": "4b7ed98e-405d-4ecc-a868-57527656e50b",
+		"name": "Who are you3?",
+		"description": "Black and yellow",
+		"schema": {
+			"resolved": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Hi ",
+							"type": "label",
+							"componentId": 4
+						}, {
+							"value": "Name",
+							"type": "label",
+							"style": {
+								"fontSize": 20,
+								"color": "red"
+							},
+							"componentId": 7
+						}],
+						"type": "horizontal",
+						"style": {
+							"backgroundColor": "yellow",
+							"padding": 50
+						}
+					}]
+				}]
+			},
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"placeholder": "Enter Name",
+							"type": "textfield",
+							"componentId": 1
+						}, {
+							"placeholder": "Enter your email Id",
+							"type": "textfield",
+							"componentId": 2
+						}, {
+							"value": "Submit",
+							"type": "button",
+							"style": {
+								"color": "#252525"
+							},
+							"componentId": 3
+						}],
+						"type": "vertical",
+						"style": {
+							"backgroundColor": "#efef",
+							"padding": 50
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-05-03T14:50:10.302Z",
+		"modified_at": "2017-06-05T07:08:53.510Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 5,
+	"fields": {
+		"uuid": "2d0b1e17-a294-4427-adfb-b191338c8ea2",
+		"name": "All components",
+		"description": "Contains all possible components",
+		"schema": {
+			"resolved": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Label Value",
+							"type": "label",
+							"componentId": 4
+						}],
+						"type": "vertical"
+					}]
+				}]
+			},
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"name": "autocomplete",
+							"placeholder": "Auto complete",
+							"type": "autocomplete",
+							"list": ["Apple", "Mango", "Guava"]
+						}, {
+							"name": "button",
+							"value": "Button",
+							"type": "button"
+						}, {
+							"name": "checkbox",
+							"value": true,
+							"type": "checkbox",
+							"label": "Some check box."
+						}, {
+							"name": "divider",
+							"thickness": 2,
+							"type": "divider",
+							"color": "#252525"
+						}, {
+							"name": "dropdown",
+							"placeholder": "Choose an item",
+							"type": "dropdown",
+							"list": [{
+								"value": "Apple",
+								"key": 1
+							}, {
+								"value": "Mango",
+								"key": 2
+							}]
+						}, {
+							"name": "iconbutton",
+							"type": "iconbutton",
+							"iconName": "bath",
+							"color": "red"
+						}, {
+							"name": "image",
+							"value": "https://cdn.pixabay.com/photo/2013/07/13/10/18/ghost-156969_960_720.png",
+							"type": "image"
+						}, {
+							"name": "label",
+							"value": "Label",
+							"type": "label"
+						}, {
+							"name": "textarea",
+							"value": "Text Area",
+							"type": "textarea"
+						}, {
+							"name": "textfield",
+							"value": "Text Input",
+							"type": "textfield"
+						}],
+						"type": "vertical"
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-05-11T08:18:48.760Z",
+		"modified_at": "2017-06-01T11:12:05.441Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 6,
+	"fields": {
+		"uuid": "c88bc806-1f18-4735-b291-7b5fbf2482d3",
+		"name": "Onboarding",
+		"description": "Onboarding with picture",
+		"schema": {
+			"resolved": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Hi ",
+							"type": "label",
+							"componentId": 4
+						}, {
+							"value": "Name",
+							"type": "label",
+							"style": {
+								"fontSize": 20,
+								"color": "red"
+							},
+							"componentId": 7
+						}, {
+							"value": " ",
+							"type": "label",
+							"componentId": 8
+						}],
+						"type": "horizontal"
+					}]
+				}]
+			},
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "http://placehold.it/350x150",
+							"placeholder": "Click Image",
+							"type": "image",
+							"style": {
+								"borderRadius": 10,
+								"alignSelf": "center",
+								"height": 20,
+								"width": 20
+							},
+							"componentId": 1
+						}, {
+							"placeholder": "Name",
+							"type": "textfield",
+							"componentId": 1
+						}, {
+							"placeholder": "Enter your email Id",
+							"type": "textfield",
+							"componentId": 2
+						}, {
+							"value": "Submit",
+							"type": "button",
+							"style": {
+								"color": "#252525"
+							},
+							"componentId": 3
+						}],
+						"type": "vertical",
+						"style": {
+							"alignItems": "center",
+							"justifyContent": "center"
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-05-12T08:32:24.656Z",
+		"modified_at": "2017-05-12T08:37:47.859Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 7,
+	"fields": {
+		"uuid": "defedee6-7adb-45c2-b444-cb6a3de07b6f",
+		"name": "Contact Form",
+		"description": "A simple contact form (ND)",
+		"schema": {
+			"resolved": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Who are you ?",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							},
+							"componentId": 4
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"components": [{
+								"value": "Name: ",
+								"type": "label",
+								"style": {
+									"fontWeight": 700,
+									"marginTop": 16
+								}
+							}, {
+								"name": "data.name",
+								"value": "Name of the User",
+								"type": "label",
+								"style": {
+									"marginTop": 16
+								}
+							}],
+							"type": "horizontal"
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 400,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"step_1": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Contact form",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							}
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "Fill out the form to contact me !!!!",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 18,
+								"marginTop": 16
+							}
+						}, {
+							"placeholder": "Name",
+							"type": "charfield"
+						}, {
+							"placeholder": "Email",
+							"type": "charfield"
+						}, {
+							"placeholder": "Message",
+							"type": "textfield"
+						}, {
+							"value": "Contact ME !!",
+							"type": "button",
+							"style": {
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 300,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"step_2": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"name": "data.email",
+							"value": "your email",
+							"type": "label",
+							"style": {
+								"fontSize": 20
+							}
+						}, {
+							"name": "data.message",
+							"value": "your message",
+							"type": "label",
+							"style": {
+								"fontSize": 20
+							}
+						}, {
+							"value": "Proceed",
+							"type": "button",
+							"style": {
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 300,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Wanna contact us ?",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							},
+							"componentId": 4
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "Fill out a simple form, we will never Contact you ;) , just kidding (I am not kidding !!) ",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"marginTop": 16
+							}
+						}, {
+							"value": "ok lets try that !!",
+							"type": "button",
+							"style": {
+								"maxWidth": 192,
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 400,
+							"padding": 16
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-05-30T07:13:00.572Z",
+		"modified_at": "2017-05-30T07:13:00.572Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 8,
+	"fields": {
+		"uuid": "145741a6-0b76-410d-a3e2-0f5b232b2d1c",
+		"name": "Contact Form (+send email)",
+		"description": "A simple contact form (take data , post on keen, send email, show success message)",
+		"schema": {
+			"resolved": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Who are you ?",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							},
+							"componentId": 4
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"components": [{
+								"value": "Name: ",
+								"type": "label",
+								"style": {
+									"fontWeight": 700,
+									"marginTop": 16
+								}
+							}, {
+								"name": "data.name",
+								"value": "Name of the User",
+								"type": "label",
+								"style": {
+									"marginTop": 16
+								}
+							}],
+							"type": "horizontal"
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 400,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"step_1": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Contact form",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							}
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "Fill out the form to contact me !!!!",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 18,
+								"marginTop": 16
+							}
+						}, {
+							"placeholder": "Name",
+							"type": "charfield"
+						}, {
+							"placeholder": "Email",
+							"type": "charfield"
+						}, {
+							"placeholder": "Message",
+							"type": "textfield"
+						}, {
+							"value": "Contact ME !!",
+							"type": "button",
+							"style": {
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 300,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"step_2": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"name": "data.email",
+							"value": "your email",
+							"type": "label",
+							"style": {
+								"fontSize": 20
+							}
+						}, {
+							"name": "data.message",
+							"value": "your message",
+							"type": "label",
+							"style": {
+								"fontSize": 20
+							}
+						}, {
+							"value": "Proceed",
+							"type": "button",
+							"style": {
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 300,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Wanna contact us ?",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							},
+							"componentId": 4
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "Fill out a simple form, we will never Contact you ;) , just kidding (I am not kidding !!) ",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"marginTop": 16
+							}
+						}, {
+							"value": "ok lets try that !!",
+							"type": "button",
+							"style": {
+								"maxWidth": 192,
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 400,
+							"padding": 16
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-05-31T12:53:47.518Z",
+		"modified_at": "2017-05-31T12:53:47.518Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 9,
+	"fields": {
+		"uuid": "df157fd4-a1cd-4b56-aa88-1befd21dc8c8",
+		"name": "2e232",
+		"description": "3er23r3r23",
+		"schema": {
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "This is a sample text.",
+							"type": "label",
+							"style": {
+								"marginBottom": 10,
+								"fontSize": 22
+							},
+							"componentId": 4
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 450,
+							"padding": 16
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-06-01T07:27:03.661Z",
+		"modified_at": "2017-06-02T07:46:44.277Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 10,
+	"fields": {
+		"uuid": "b8f0049e-25be-4933-89d3-25351a7ef4a8",
+		"name": "OTP verify (no ph sent to service)",
+		"description": "verify OTP (use main PAI for otp verification  (/generate-otp/totp/))",
+		"schema": {
+			"success": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "OTP successfully verified",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							},
+							"componentId": 4
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 400,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"failure": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "OTP verification failed",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							},
+							"componentId": 4
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 400,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"verify_otp_screen": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Enter your OTP",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							}
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "Enter the verification code sent to",
+							"type": "label",
+							"style": {
+								"fontSize": 18,
+								"marginTop": 16
+							}
+						}, {
+							"name": "data.phone",
+							"value": "+91xxxxxxxxxx",
+							"type": "label",
+							"style": {
+								"fontSize": 20
+							}
+						}, {
+							"placeholder": "OTP",
+							"type": "textfield"
+						}, {
+							"value": "Proceed",
+							"type": "button",
+							"style": {
+								"color": "#000"
+							}
+						}, {
+							"components": [{
+								"value": "Didn't receive a code ?",
+								"type": "label",
+								"style": {
+									"marginBottom": 16,
+									"marginTop": 16
+								}
+							}, {
+								"value": "Retry",
+								"type": "label",
+								"style": {
+									"padding": 8,
+									"color": "#000",
+									"borderStyle": "solid",
+									"borderWidth": 1,
+									"borderColor": "#000",
+									"margin": 8
+								}
+							}],
+							"type": "horizontal"
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 300,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "Enter your Phone Number",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 36
+							}
+						}, {
+							"orientation": "horizontal",
+							"type": "divider"
+						}, {
+							"value": "You'll get an OTP via SMS.",
+							"type": "label",
+							"style": {
+								"marginBottom": 16,
+								"fontSize": 18,
+								"marginTop": 16
+							}
+						}, {
+							"placeholder": "Phone Number",
+							"type": "textfield"
+						}, {
+							"value": "Proceed",
+							"type": "button",
+							"style": {
+								"color": "#000"
+							}
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 300,
+							"padding": 16
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-06-02T06:19:34.360Z",
+		"modified_at": "2017-06-02T08:47:27.846Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 11,
+	"fields": {
+		"uuid": "5e0c567c-f45d-4fc3-9e46-5d69d5114ec2",
+		"name": "r3r3r",
+		"description": "3r33r3",
+		"schema": {
+			"resolved": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "This is a sample text.",
+							"type": "label",
+							"style": {
+								"marginBottom": 10,
+								"fontSize": 22
+							},
+							"componentId": 4
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 450,
+							"padding": 16
+						}
+					}]
+				}]
+			},
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "This is a sample text.",
+							"type": "label",
+							"style": {
+								"marginBottom": 10,
+								"fontSize": 22
+							},
+							"componentId": 4
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 450,
+							"padding": 16
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-06-05T07:15:16.501Z",
+		"modified_at": "2017-06-05T07:15:16.501Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 12,
+	"fields": {
+		"uuid": "2afefdc5-5dc9-4e78-802f-57766a2e7b9d",
+		"name": "wrfweew",
+		"description": "werwewer",
+		"schema": {
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "This is a sererwample text.",
+							"type": "label",
+							"style": {
+								"marginBottom": 10,
+								"fontSize": 22
+							},
+							"componentId": 4
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 450,
+							"padding": 16
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-06-05T07:17:17.832Z",
+		"modified_at": "2017-06-05T07:17:17.832Z"
+	}
+}, {
+	"model": "mold.templates",
+	"pk": 13,
+	"fields": {
+		"uuid": "c32f5acc-fba4-4317-b7b2-b0aaa412443a",
+		"name": "efref",
+		"description": "efree",
+		"schema": {
+			"init": {
+				"sections": [{
+					"items": [{
+						"components": [{
+							"value": "This is a sample text.",
+							"type": "label",
+							"style": {
+								"marginBottom": 10,
+								"fontSize": 22
+							},
+							"componentId": 4
+						}],
+						"type": "vertical",
+						"style": {
+							"maxWidth": 450,
+							"padding": 16
+						}
+					}]
+				}]
+			}
+		},
+		"created_at": "2017-06-05T07:17:45.345Z",
+		"modified_at": "2017-06-05T07:17:45.345Z"
+	}
+}]
