@@ -9,7 +9,7 @@
 #echo Starting Gunicorn.
 exec gunicorn config.wsgi:application \
     --name v-dj-sample \
-    --bind 0.0.0.0:8000 \
+    --bind 0.0.0.0:80 \
     --workers 3 \
     --log-level=info \
     "$@"

@@ -16,7 +16,7 @@ spec:
         image: inforian/sam:v7
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8000
+        - containerPort: 8080
         volumeMounts:
         - name: secrets
           mountPath: /etc/secrets
