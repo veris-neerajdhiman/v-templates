@@ -31,7 +31,7 @@ template_list = views.TemplateViewSet.as_view({
 
 template_detail = views.TemplateViewSet.as_view({
     'get': 'retrieve',
-    'patch': 'update'
+    'patch': 'partial_update'
 })
 
 urlpatterns = [
