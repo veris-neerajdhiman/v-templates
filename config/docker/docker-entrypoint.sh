@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Prepare log files and start outputting logs to stdout
-touch /var/logs/gunicorn.log
-touch /var/logs/access.log
-tail -n 0 -f /var/logs/*.log &
+touch /var/log/gunicorn.log
+touch /var/log/access.log
+tail -n 0 -f /var/log/*.log &
 
 # Start Gunicorn processes
 #echo Starting Gunicorn.
