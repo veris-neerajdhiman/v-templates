@@ -2,10 +2,15 @@
 
 from .base import *
 
+# ######### DEBUG CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
+DEBUG = False
+# ######### END DEBUG CONFIGURATION
 
 ########## HOST CONFIGURATION
 # See: https://docs.djangoproject.com/en/1.5/releases/1.5/#allowed-hosts-required-in-production
 ALLOWED_HOSTS = [
+    'templates.noapp.mobi'
 ]
 ########## END HOST CONFIGURATION
 
@@ -18,10 +23,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = environ.get('EMAIL_HOST', '')
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-host-password
-EMAIL_HOST_PASSWORD = environ.get('EMAIL_HOST_PASSWORD', getenv('EMAIL_HOST_PASSWORD', ''))
+EMAIL_HOST_PASSWORD = environ.get('EMAIL_HOST_PASSWORD', '')
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-host-user
-EMAIL_HOST_USER = environ.get('EMAIL_HOST_USER', getenv('EMAIL_HOST_USER', ''))
+EMAIL_HOST_USER = environ.get('EMAIL_HOST_USER', '')
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#email-port
 EMAIL_PORT = environ.get('EMAIL_PORT', 587)
@@ -46,7 +51,7 @@ DATABASES = {
         # The PostgreSQL backend (django.db.backends.postgresql_psycopg2)
         # is also available as django.db.backends.postgresql. :)
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': get_env_setting('DATABASE_NAME'),
+        'NAME': get_env_setting('DATABASE_NAME_TEMPLATE'),
         'USER': get_env_setting('DATABASE_USER'),
         'PASSWORD': get_env_setting('DATABASE_PASSWORD'),
         'HOST': get_env_setting('DATABASE_HOST'),
@@ -96,20 +101,26 @@ CACHES = {
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+        'rest_framework_swagger.renderers.OpenAPIRenderer',
+        'rest_framework_swagger.renderers.SwaggerUIRenderer',
+    ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication'
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': (
         'rest_framework.filters.OrderingFilter',
         'rest_framework.filters.SearchFilter'
     ),
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-    )
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 50
 }
 
 REST_FRAMEWORK_EXTENSIONS = {
