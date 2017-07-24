@@ -36,3 +36,17 @@ class TemplateSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Templates
         fields = ('url', 'uuid', 'name', 'description', 'schema', )
+
+    def create(self, validated_data):
+        """
+
+        :param validated_data: Validated data
+        :return: Temp[late obj
+        """
+        user=self.context.get('request').user
+
+        validated_data.update({
+            'user': user
+        })
+
+        return models.Templates.objects.create(**validated_data)

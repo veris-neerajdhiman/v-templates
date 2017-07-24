@@ -16,6 +16,7 @@ import uuid
 
 # Django
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.postgres.fields import JSONField
 
@@ -29,6 +30,9 @@ class Templates(models.Model):
     """Templates model
 
     """
+
+    # Relation
+    user = models.ForeignKey(User)
 
     # Attributes
     uuid = models.UUIDField(

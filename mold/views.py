@@ -3,7 +3,7 @@
 
 """
 - mold.views
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 
 - This file contains Template micro-service views, every HTTP request/router points to this file.
 """
@@ -31,6 +31,22 @@ class TemplateViewSet(viewsets.ModelViewSet):
     model = models.Templates
     queryset = model.objects.all()
     serializer_class = serializers.TemplateSerializer
-    # TODO : remove AllowAny permission with proper permission class
-    permission_classes = (permissions.AllowAny, )
+    permission_classes = (permissions.IsAuthenticated, )
     lookup_field = 'uuid'
+
+    def get_serializer_context(self):
+        """
+        Extra context provided to the serializer class.
+        """
+        return {
+            'request': self.request,  # request object is passed here
+        }
+
+    def get_queryset(self):
+        """
+
+        :return: Template queryset
+        """
+        qs = super(TemplateViewSet, self).get_queryset()
+
+        return qs.filter(user=self.request.user)
