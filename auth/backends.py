@@ -42,6 +42,9 @@ class JWTAuthentication(authentication.BaseAuthentication):
 
         user, created = User.objects.get_or_create(username=clean_username)
 
+        # check user scope for Template-service
+        self._check_user_scope(valid_token.get('user_info'))
+
         return (user, None)
 
     def _decode_jwt(self, token):
@@ -54,3 +57,11 @@ class JWTAuthentication(authentication.BaseAuthentication):
                                 verify=True)
         except Exception as e:
             raise exceptions.AuthenticationFailed(e)
+
+    def _check_user_scope(self, user_info):
+        """
+
+        """
+        template_scope = getattr(settings, 'TEMPLATE_SCOPE', 'templates')
+        if template_scope not in user_info.get('scope'):
+            raise exceptions.AuthenticationFailed("User don't have enough permission to access this micro-service")
