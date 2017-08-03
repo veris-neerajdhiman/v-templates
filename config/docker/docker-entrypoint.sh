@@ -13,4 +13,10 @@
 #    --workers 3 \
 #    --log-level=info \
 #    "$@"
-exec python manage.py runserver 0.0.0.0:80
+#exec python manage.py runserver 0.0.0.0:80
+
+set -e
+
+uwsgi --ini /etc/uwsgi/init/uwsgi.ini
+
+nginx -g 'daemon off;'

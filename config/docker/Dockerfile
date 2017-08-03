@@ -8,7 +8,10 @@ ADD ./requirements/test.txt /v-templates/requirements/test.txt
 ADD ./requirements/production.txt /v-templates/requirements/production.txt
 
 
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && \
+	apt-get install -y git && \
+	apt-get install -y nginx
+
 RUN pip install -r ./requirements/production.txt
 
 ADD . /v-templates
