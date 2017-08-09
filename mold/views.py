@@ -14,7 +14,8 @@ from __future__ import unicode_literals
 # 3rd party
 
 # rest-framework
-from rest_framework import viewsets, permissions
+from rest_framework.response import Response
+from rest_framework import viewsets, permissions, status
 
 # Django
 
@@ -34,3 +35,13 @@ class TemplateViewSet(viewsets.ModelViewSet):
     # TODO : remove AllowAny permission with proper permission class
     permission_classes = (permissions.AllowAny, )
     lookup_field = 'uuid'
+
+    def get_schema(self, request, uuid):
+        """
+
+        :param uuid: Template obj uuid
+        :return: Template schema
+        """
+        response = serializers.TemplateSchemaSerializer(instance=self.get_object())
+
+        return Response(response.data.get('schema'), status=status.HTTP_200_OK)

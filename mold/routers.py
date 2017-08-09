@@ -34,6 +34,10 @@ template_detail = views.TemplateViewSet.as_view({
     'patch': 'partial_update'
 })
 
+template_schema = views.TemplateViewSet.as_view({
+    'get': 'get_schema',
+})
+
 urlpatterns = [
     url(r'^templates/$',
         template_list,
@@ -41,4 +45,7 @@ urlpatterns = [
     url(r'^templates/(?P<uuid>{uuid})/$'.format(uuid=UUID_REGEX),
         template_detail,
         name='templates-detail'),
+    url(r'^templates/(?P<uuid>{uuid})/schema/$'.format(uuid=UUID_REGEX),
+        template_schema,
+        name='templates-schema'),
 ]

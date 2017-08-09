@@ -36,3 +36,13 @@ class TemplateSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Templates
         fields = ('url', 'uuid', 'name', 'description', 'schema', )
+
+
+class TemplateSchemaSerializer(serializers.ModelSerializer):
+    """
+
+    """
+
+    class Meta:
+        model = models.Templates
+        fields = ('schema', )
